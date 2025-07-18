@@ -46,12 +46,12 @@ Edit
 
 **Item JSON Example:**
 
-```json
 {
   "name": "Spicy Devilled Beef Pizza",
   "price": 1400,
   "category": "Pizza"
 }
+
 2. Invoice Management
 POST /invoices → Create a new invoice
 
