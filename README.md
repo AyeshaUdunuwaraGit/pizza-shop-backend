@@ -37,9 +37,9 @@ Edit
 
 ---
 
-## 🔌 API Features
+# 🔌 API Features
 
-### 1. **Item Management**
+## 1. **Item Management**
 
 - **GET** `/items` → List all available items (pizzas, toppings, beverages)
 - **POST** `/items` → Add a new item
@@ -52,7 +52,7 @@ Edit
   "category": "Pizza"
 }
 
-2. Invoice Management
+## 2.  **Invoice Management**
 POST /invoices → Create a new invoice
 
 GET /invoices → List all invoices with breakdown
@@ -86,7 +86,9 @@ Edit
             }
         ]
     }
-✅ Invoices are calculated using standard POS logic:
+
+
+### Invoices are calculated using standard POS logic: 
 
 Line Total = unit_price × quantity
 
@@ -95,9 +97,7 @@ Subtotal = sum of line totals
 Tax (10%) is added to get the final total
 
 🧾 Sample Invoice Response
-json
-Copy
-Edit
+
 [
   {
     "invoice_id": 3,
@@ -112,27 +112,21 @@ Edit
 ]
 Note: This response shows invoice line items. You may enhance this by grouping items under invoice headers if needed.
 
-🧪 How to Run & Test
+### 3.  **🧪 How to Run & Test**
+
 Clone this repo
 
-bash
-Copy
-Edit
-git clone https://github.com/your-username/pizza-shop-backend.git
+git clone https://github.com/AyeshaUdunuwaraGit/pizza-shop-backend.git
 cd pizza-shop-backend
 Configure database in config/db.go
 
-go
-Copy
-Edit
-connStr := "host=localhost port=5432 user=postgres password=yourpassword dbname=pizzadb sslmode=disable"
-Run the Go server
+connStr := "host=localhost port=5432 user=postgres password=@1234 dbname=pizza_shop sslmode=disable"
 
-bash
-Copy
-Edit
+### Run the Go server 
+
 go run main.go
-Test using Postman or curl
+
+## Test using Postman or curl ##
 
 GET http://localhost:8080/items
 
@@ -142,7 +136,8 @@ GET http://localhost:8080/invoices
 
 POST http://localhost:8080/invoices
 
-✅ Assessment Requirements Fulfilled
+## ✅ Assessment Requirements Fulfilled 
+
  Add new pizzas, toppings, and beverages via API
 
  Create invoice with customer name, selected items, quantities
@@ -159,7 +154,7 @@ POST http://localhost:8080/invoices
 
  Code testable via Postman
 
-📌 Notes
+## 📌 Notes
 Item categories must be one of: Pizza, Topping, or Beverage
 
 You can enhance the project by adding:
@@ -172,7 +167,7 @@ Discount and coupon support
 
 Unit tests using Go's testing framework
 
-📞 Contact
+## 📞 Contact
 Author: Ayesha Udunuwara
-Email: [your-email@example.com]
+Email: a.n.s.udunuwara@gmail.com
 Feel free to reach out for any queries or suggestions!
